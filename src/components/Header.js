@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png"; // Import your logo image here
 
 const Header = () => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Function to generate breadcrumb based on URL path
   const getBreadcrumb = () => {
@@ -22,7 +23,7 @@ const Header = () => {
             <img src={logo} alt="Logo" className="h-8" />
           </Link>
 
-          {/* Navigation Links */}
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-8 text-gray-700">
             <Link to="/" className="hover:text-blue-500">
               Home
@@ -40,9 +41,67 @@ const Header = () => {
 
           {/* Mobile Menu Icon */}
           <div className="md:hidden">
-            {/* You could add a menu icon here for mobile toggle (optional) */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-gray-700 focus:outline-none"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d={
+                    isMobileMenuOpen
+                      ? "M6 18L18 6M6 6l12 12"
+                      : "M4 6h16M4 12h16m-7 6h7"
+                  }
+                ></path>
+              </svg>
+            </button>
           </div>
         </div>
+
+        {/* Mobile Dropdown Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white shadow-lg">
+            <div className="space-y-4 px-4 py-4 text-gray-700">
+              <Link
+                to="/"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block hover:text-blue-500"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block hover:text-blue-500"
+              >
+                About
+              </Link>
+              <Link
+                to="/program"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block hover:text-blue-500"
+              >
+                Program
+              </Link>
+              <Link
+                to="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block hover:text-blue-500"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Jumbotron Image */}
