@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-footer.png";
 
 export default function Footer() {
   return (
     <footer className="w-full bg-gray-800 text-gray-300">
       <div className="max-w-screen-2xl mx-auto px-6 py-8">
         {/* Row 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 border-b border-gray-700 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 border-gray-700 pb-8">
           {/* Column 1: Logo and Slogan */}
           <div>
             <Link to="/" className="text-lg font-semibold">
@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
 
         {/* Row 2 */}
-        <div className="mt-6 py-4 text-center text-sm text-gray-400 border-gray-700">
+        <div className="mt-4 py-3 text-center text-sm border-t text-gray-400 border-white">
           © {new Date().getFullYear()} Your Company. All rights reserved.
         </div>
       </div>

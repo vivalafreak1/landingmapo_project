@@ -11,12 +11,14 @@ export default function App() {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/program" element={<ProgramPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
+      <div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/program" element={<ProgramPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </div>
       <Footer />
     </Router>
   );
