@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png"; // Import your logo image here
+import banner from "../assets/banner.jpg";
 
 const Header = () => {
   const location = useLocation();
@@ -134,16 +135,16 @@ const Header = () => {
 
       {/* Jumbotron Image */}
       <div
-        className="w-full h-64 mt-16 bg-center bg-cover"
+        className="w-full h-[calc(100vw*0.5137)] md:h-[500px] lg:h-[600px] mt-16 bg-center bg-cover"
         style={{
-          backgroundImage: `url('https://via.placeholder.com/1200x400')`,
+          backgroundImage: `url(${banner})`,
         }}
       >
-        <div className="flex items-center justify-center h-full bg-black bg-opacity-40">
+        {/*<div className="flex items-center justify-center h-full bg-black bg-opacity-40">
           <h1 className="text-3xl font-bold text-white md:text-5xl">
             Welcome to Our Website
           </h1>
-        </div>
+        </div>*/}
       </div>
 
       {/* Breadcrumb Bar */}
