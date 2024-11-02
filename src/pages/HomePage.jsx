@@ -8,13 +8,14 @@ import { IoGitNetworkOutline } from "react-icons/io5";
 import { IoIosPeople } from "react-icons/io";
 import { AiOutlineLike } from "react-icons/ai";
 import { GiInspiration } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
     <div>
       {/* Section One: Overview */}
       <section className="flex flex-col items-center justify-center h-screen px-4 space-y-8 text-center bg-blue-950">
-        <h1 className="text-4xl font-bold text-white">
+        <h1 className="text-4xl font-bold text-blue-100">
           Menghubungkan Alumni, Menginspirasi Generasi
         </h1>
         <p className="max-w-xl text-white">
@@ -94,9 +95,11 @@ const HomePage = () => {
               alumni serta mendukung peningkatan kualitas pendidikan di SMAN 2
               Cibinong.
             </p>
-            <button className="px-4 py-2 mt-4 text-white rounded-lg bg-blue-950">
-              Read More
-            </button>
+            <Link to="/about">
+              <button className="px-4 py-2 mt-4 text-white rounded-lg bg-blue-950">
+                Read More
+              </button>
+            </Link>
           </div>
         </section>
       </div>
