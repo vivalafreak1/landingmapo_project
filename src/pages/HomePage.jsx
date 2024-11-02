@@ -178,8 +178,9 @@ const HomePage = () => {
           </div>
         </section>
       </div>
+
       {/* Section Four: Program */}
-      <section className="flex flex-col items-center justify-center h-screen px-4 space-y-8 text-center">
+      <section className="flex flex-col items-center justify-center py-8 px-4 space-y-8 text-center">
         <h1 className="text-4xl font-bold text-blue-950">
           Program dan Kegiatan
         </h1>
@@ -188,17 +189,67 @@ const HomePage = () => {
           mempererat hubungan antar alumni sekaligus memberikan kontribusi
           positif bagi sekolah dan masyarakat
         </p>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-          {Array.from({ length: 6 }, (_, i) => (
-            <div key={i} className="space-y-2">
-              <img
-                src="https://via.placeholder.com/200"
-                alt={`Gallery ${i + 1}`}
-                className="w-full rounded-lg"
-              />
-              <p className="text-gray-600">Gallery Item {i + 1}</p>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto justify-items-center">
+          {/* Card 1 */}
+          <div className="flex flex-col items-center space-y-2 text-center flex-grow">
+            <img
+              src="https://www.iluni-sman2cibinong.com/wp-content/uploads/2024/10/galeri-iluni-smavo-3-1024x576-600x600.jpeg"
+              alt="Pemilihan Pengurus ILUNI masa kerja 2024-2029"
+              className="w-full rounded-lg max-w-[360px] max-h-[360px]"
+            />
+            <p className="text-gray-600 text-xs">
+              Pemilihan Pengurus ILUNI masa kerja 2024-2029
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="flex flex-col items-center space-y-2 text-center flex-grow">
+            <img
+              src="https://www.iluni-sman2cibinong.com/wp-content/uploads/2024/10/galeri-iluni-smavo-2-1024x576-600x600.jpeg"
+              alt="Pengukuhan Pengurus ILUNI masa kerja 2024-2029"
+              className="w-full rounded-lg max-w-[360px] max-h-[360px]"
+            />
+            <p className="text-gray-600 text-xs">
+              Pengukuhan Pengurus ILUNI masa kerja 2024-2029
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="flex flex-col items-center space-y-2 text-center flex-grow">
+            <img
+              src="https://www.iluni-sman2cibinong.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-21-at-09.20.19-1024x576-600x600.jpeg"
+              alt="Rapat Kerja ILUNI Untuk Reuni Akbar 2024"
+              className="w-full rounded-lg max-w-[360px] max-h-[360px]"
+            />
+            <p className="text-gray-600 text-xs">
+              Rapat Kerja ILUNI Untuk Reuni Akbar 2024
+            </p>
+          </div>
+
+          {/* Card 4 */}
+          <div className="flex flex-col items-center space-y-2 text-center flex-grow">
+            <img
+              src="https://www.iluni-sman2cibinong.com/wp-content/uploads/2024/10/galeri-iluni-smavo-12-575x1024-600x600.jpeg"
+              alt="Gallery Item 4"
+              className="w-full rounded-lg max-w-[360px] max-h-[360px]"
+            />
+            <p className="text-gray-600 text-xs">
+              Pemberian kenang-kenangan dari ILUNI kepada para guru SMAN 2
+              Cibinong
+            </p>
+          </div>
+
+          {/* Card 5 */}
+          <div className="flex flex-col items-center space-y-2 text-center flex-grow">
+            <img
+              src="https://www.iluni-sman2cibinong.com/wp-content/uploads/2024/10/galeri-iluni-smavo-17-577x1024-600x600.jpeg"
+              alt="Gallery Item 5"
+              className="w-full rounded-lg max-w-[360px] max-h-[360px]"
+            />
+            <p className="text-gray-600 text-xs">
+              Peresmian official logo oleh ketua ILUNI masa kerja 2024-2029
+            </p>
+          </div>
         </div>
       </section>
     </div>
